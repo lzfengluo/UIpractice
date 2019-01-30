@@ -2,4 +2,5 @@
     <string name="app_name">UI控件练习</string>
 
     <string name="auto_text">自动完成文本</string>
+    <string name="btn_search">搜索</string>
 </resources>

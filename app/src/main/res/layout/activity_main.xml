@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
-                android:id="@+id/btn_auto_tv"
+                android:id="@+id/btn_auto_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/auto_text"/>
