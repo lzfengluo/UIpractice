@@ -24,7 +24,7 @@ public class AutoTextActivity extends Activity {
             "ming ri",
             "ming ri zhi hou",
             "ming ri zhi zi",
-            "he bei sheng ming ri chu ban she"
+            "he bei sheng ming ri chu ban she "
     };
 
     @Override
