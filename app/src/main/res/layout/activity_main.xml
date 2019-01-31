@@ -19,11 +19,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/auto_text"/>
             <Button
+                android:id="@+id/btn_seek_bar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/btn_seek_bar"/>
             <Button
+                android:id="@+id/btn_rating_bar"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@string/btn_rating_bar"/>
         </LinearLayout>
     </ScrollView>
 

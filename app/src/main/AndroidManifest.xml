@@ -19,6 +19,10 @@
 
         <activity android:name=".AutoTextActivity"/>
 
+        <activity android:name=".SeekBarActivity"/>
+
+        <activity android:name=".RatingBarActivity"/>
+
     </application>
 
 </manifest>
