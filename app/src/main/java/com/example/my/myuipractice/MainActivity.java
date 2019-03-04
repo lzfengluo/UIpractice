@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnAutoText;//自动完成文本
     private Button btnSeekBar;//拖动条
     private Button btnRatingBar;//星级评分条
+    private Button btnPopupWindow;//底部弹出框
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         btnSeekBar.setOnClickListener(new onClickBtn());
         btnRatingBar = (Button) findViewById(R.id.btn_rating_bar);
         btnRatingBar.setOnClickListener(new onClickBtn());
+        btnPopupWindow = (Button) findViewById(R.id.btn_popup_window);
+        btnPopupWindow.setOnClickListener(new onClickBtn());
     }
 
     /**
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_rating_bar:
                     openAct(RatingBarActivity.class);
+                    break;
+                case R.id.btn_popup_window:
+                    openAct(PopupWindowActivity.class);
                     break;
 
             }

@@ -28,6 +28,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_rating_bar"/>
+            <Button
+                android:id="@+id/btn_popup_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_popup_window"/>
         </LinearLayout>
     </ScrollView>
 

@@ -23,6 +23,9 @@
 
         <activity android:name=".RatingBarActivity"/>
 
+        <activity android:name=".PopupWindowActivity"
+            android:theme="@style/MyDialogStyleBottom"/>
+
     </application>
 
 </manifest>

@@ -8,4 +8,6 @@
     <string name="seekBar_text">当前值：50</string>
     <string name="btn_rating_bar">星级评分条</string>
     <string name="btn_submit">提交</string>
+
+    <string name="btn_popup_window">底部弹出框</string>
 </resources>
