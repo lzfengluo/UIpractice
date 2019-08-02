@@ -10,4 +10,7 @@
     <string name="btn_submit">提交</string>
 
     <string name="btn_popup_window">底部弹出框</string>
+
+    <string name="btn_file_management">文件管理器</string>
+    <string name="no_permission">没有权限</string>
 </resources>

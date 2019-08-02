@@ -15,24 +15,29 @@
             android:orientation="vertical">
             <Button
                 android:id="@+id/btn_auto_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/auto_text"/>
             <Button
                 android:id="@+id/btn_seek_bar"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_seek_bar"/>
             <Button
                 android:id="@+id/btn_rating_bar"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_rating_bar"/>
             <Button
                 android:id="@+id/btn_popup_window"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btn_popup_window"/>
+            <Button
+                android:id="@+id/btn_file_management"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_file_management"/>
         </LinearLayout>
     </ScrollView>
 
