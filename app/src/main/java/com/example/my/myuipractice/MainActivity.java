@@ -1,10 +1,26 @@
 package com.example.my.myuipractice;
 
 import android.content.Intent;
+import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.yanzhenjie.permission.AndPermission;
+import com.yanzhenjie.permission.Permission;
+import com.yanzhenjie.permission.PermissionListener;
+import com.yanzhenjie.permission.Rationale;
+import com.yanzhenjie.permission.RationaleListener;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
      * 文件管理
      */
     private Button btnFileManagement;
+    private Button btnWriteFile;
+    private EditText etWriteContent;
+    private final static String SD_PATH = "/storage/sdcard1/";
+    private final static String TEST_FILE_NAME = "test_write.txt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
         btnPopupWindow.setOnClickListener(new onClickBtn());
         btnFileManagement = (Button) findViewById(R.id.btn_file_management);
         btnFileManagement.setOnClickListener(new onClickBtn());
+        etWriteContent = findViewById(R.id.et_write);
+        btnWriteFile = findViewById(R.id.btn_write_file);
+        btnWriteFile.setOnClickListener(new onClickBtn());
+        findViewById(R.id.btn_screen).setOnClickListener(new onClickBtn());
     }
 
     /**
@@ -74,10 +98,46 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_file_management:
                     openAct(FileManagementActivity.class);
                     break;
+                case R.id.btn_write_file:
+                    String content = etWriteContent.getText().toString();
+                    int res = writeTest(content);
+                    if (res == 0) {
+                        Toast.makeText(MainActivity.this, "写入成功", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(MainActivity.this, "写入失败 " + res, Toast.LENGTH_SHORT).show();
+                    }
+                    break;
+                case R.id.btn_screen:
+                    openAct(ScreenActivity.class);
+                    break;
                 default:
                     break;
             }
         }
+    }
+
+    private int writeTest(String content) {
+        Log.d("zzc", "路径：" + Environment.getExternalStorageDirectory());
+        Log.d("zzc", "路径：" + Environment.getDataDirectory());
+        File file = new File(SD_PATH, TEST_FILE_NAME);
+        if (file.exists()) {
+            file.delete();
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return -1;
+            }
+        }
+        try {
+            FileWriter fw = new FileWriter(file);
+            fw.write(content);
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return -2;
+        }
+        return 0;
     }
 
     /**
