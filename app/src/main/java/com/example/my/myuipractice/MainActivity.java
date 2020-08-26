@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         btnWriteFile = findViewById(R.id.btn_write_file);
         btnWriteFile.setOnClickListener(new onClickBtn());
         findViewById(R.id.btn_screen).setOnClickListener(new onClickBtn());
+        findViewById(R.id.btn_line_chart).setOnClickListener(new onClickBtn());
     }
 
     /**
@@ -109,6 +110,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_screen:
                     openAct(ScreenActivity.class);
+                    break;
+                case R.id.btn_line_chart:
+                    openAct(LineChartActivity.class);
                     break;
                 default:
                     break;

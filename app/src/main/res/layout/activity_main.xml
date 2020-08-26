@@ -54,6 +54,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自动亮熄屏"/>
+
+            <Button
+                android:id="@+id/btn_line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="折线图表"/>
         </LinearLayout>
     </ScrollView>
 
